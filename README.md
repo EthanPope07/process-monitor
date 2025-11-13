@@ -1,18 +1,16 @@
 # Process Monitor (C)
 
-A simple Linux process monitoring tool written in C.
+A simple Linux process monitoring tool written in C. The end goal of this project is to be a simplified version of 'top'
 
 ## Current Stage
-**Stage 1 — Project Initialization**
+**Stage 3 — Display process IDs and names**
 
-This version simply sets up the project structure and build system.
-Future stages will progressively add features such as:
-- Listing process IDs from `/proc`
-- Displaying process names
-- Showing CPU and memory usage
-- Real-time updates with ncurses
+This version:
+- Lists all running processes by PID
+- Displays the process name from `/proc/[pid]/comm`
 
-##Build Instructions
+## Build Instructions
 ```bash
 make
 ./procmon
+```
