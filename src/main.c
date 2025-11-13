@@ -8,8 +8,10 @@ int main(void) {
     // list_processes();
 
     // Stage 3 output:
-    list_processes_with_names();
+    //list_processes_with_names();
 
+	// Stage 4 output:
+	list_processes_with_stats();
     return 0;
 }
 
