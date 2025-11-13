@@ -6,7 +6,7 @@ Inspired by `top`, this project progressively builds a command-line process moni
 ---
 
 ## Project Stages
-
+In order to develop this project I divided it into simple stages which showcase the process behind its creation.
 ### **Stage 1 — Project Initialization**
 - Set up project structure (`src/`, `include/`, `Makefile`)
 - Added initial `main.c` printing a welcome message
@@ -26,17 +26,18 @@ Inspired by `top`, this project progressively builds a command-line process moni
 	-	317 | bash
 	-	1189 | firefox"
 
-### **Stage 4 — CPU & Memory Usage (Upcoming)**
-- Read `/proc/[pid]/stat` for CPU usage (utime, stime)
-- Read `/proc/[pid]/status` for memory usage (VmRSS)
-- Display CPU percentage and memory usage per process
-- Optional: calculate CPU usage over intervals
+### **Stage 4 — CPU & Memory Usage**
+- Displays PID, process name, CPU usage (raw jiffies for now)
+- Displays memory usage (VmRSS in KB)
+- Prepares for real-time percentage calculation in future stages
 
 ### **Stage 5 — Real-Time Refresh**
-- Refresh the process table every few seconds
-- Clear the terminal on each refresh for live monitoring
+- Process table updates every few seconds
+- Clears the terminal for live display
+- Users can press Ctrl+C to exit
+- Keeps same columns: PID, Name, CPU (raw jiffies), Memory
 
-### **Stage 6 — ncurses UI (Stretch Goal)**
+### **Stage 6 — ncurses UI (Likely Goal)**
 - Add a colored, terminal-based interface
 - Allow navigation, sorting, and filtering
 
@@ -46,7 +47,7 @@ Inspired by `top`, this project progressively builds a command-line process moni
 
 ---
 
-## 🛠️ Build Instructions
+## Build Instructions
 ```bash
 make
 ./procmon

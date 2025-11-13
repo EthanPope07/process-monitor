@@ -106,4 +106,18 @@ void list_processes_with_stats(void) {
 
     closedir(dir);
 }
+// Stage 5 function
+void monitor_processes_realtime(unsigned int interval_sec) {
+    while (1) {
+        // Clear terminal
+        printf("\033[H\033[J");
 
+        printf("=== Process Monitor (Real-Time) ===\n\n");
+
+        // Call Stage 4 function to display PID, name, CPU, memory
+        list_processes_with_stats();
+
+        printf("\nUpdating in %u seconds... (Press Ctrl+C to exit)\n", interval_sec);
+        sleep(interval_sec);
+    }
+}

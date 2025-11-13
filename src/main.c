@@ -11,7 +11,10 @@ int main(void) {
     //list_processes_with_names();
 
 	// Stage 4 output:
-	list_processes_with_stats();
-    return 0;
+	//list_processes_with_stats();
+
+	// Stage 5 output: (input is seconds per refresh)
+	monitor_processes_realtime(1);
+	return 0;
 }
 
