@@ -1,9 +1,9 @@
 #include <stdio.h>
+#include "proc.h"
 
 int main(void) {
-	printf("Process Monitor starting...\n");
-    printf("This is the initial setup version.\n");
-    printf("Future versions will display process info from /proc.\n");
+    printf("=== Process Monitor ===\n\n");
+    list_processes();
     return 0;
-
 }
+
